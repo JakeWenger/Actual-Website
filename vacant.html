@@ -1,0 +1,51 @@
+<html>
+<head>
+    <title>Leaflet.js Essentials</title>
+    <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css" />
+</head>
+<body>
+    <script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
+    <script src="vacant_land.js" type="text/javascript"></script>
+    <div id="map" style="width: 900px; height: 500px"></div>
+    <script>
+        var map = L.map('map',
+            {center: [42.885, -78.843],
+             zoom: 11
+            });
+       var Esri_WorldGrayCanvas = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Base/MapServer/tile/{z}/{y}/{x}', {
+           attribution: 'Tiles &copy; Esri &mdash; Esri, DeLorme, NAVTEQ',
+           maxZoom: 16
+        });
+        map.addLayer(Esri_WorldGrayCanvas)
+        
+        function onEachFeature(feature, layer) {
+            var popupContent = "<p>I am worth $" + feature.properties.LANDAV + ", but I'm vacant and owned by the City of Buffalo</p>";
+	           if (feature.properties && feature.properties.popupContent) {
+		          popupContent += feature.properties.popupContent;
+            }
+            layer.bindPopup(popupContent);
+            }
+       
+        L.geoJson([vacant], {
+
+			style: function (feature) {
+				return feature.properties && feature.properties.style;
+			},
+
+			onEachFeature: onEachFeature,
+
+			pointToLayer: function (feature, latlng) {
+				return L.circleMarker(latlng, {
+					radius: 3,
+					fillColor: "#7fcdbb",
+					color: "#80c296",
+					weight: 1,
+					opacity: 1,
+					fillOpacity: 0.6
+				});
+			}
+		}).addTo(map);
+
+    </script>
+</body>
+</html>

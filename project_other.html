@@ -1,0 +1,98 @@
+<!DOCTYPE HTML>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <meta name="viewpoint" content="width=device-width, initial-scale=1.0">
+     <title>Jake Wenger</title>
+     <link rel="stylesheet" href="style1.css" type="text/css">
+ </head>
+
+ <body>
+     <body style="background-color:azure;">
+        <div id="page">
+            <div id="header">
+                <div>
+                    <ul id="navigation">
+                        <li class="selected">
+                            <a href="index.html">Home</a>
+                        </li>
+                        <li>
+                            <a href="resume.html">Resume</a>
+                        </li>
+                        <li>
+                             <a href="about.html">About Me</a>
+                        </li>
+                        <li class="menu">
+                            <a href="projects.html">Projects</a>
+                            <ul class="drop">
+                                <li>
+                                    <a href="project_GIS.html">Past University Works</a>
+                                    <a href="project_other.html">Independent Works</a>
+                                    <a href="project_school.html">Non-GIS University Works</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div id="body" class="home">
+                <div class="body">
+                    <div>
+                        <h2>Independent Works</h2>
+                        <h1>NFL Stadium Proportional Symbol Map</h1>
+                        <p style="text-align: center";><iframe height="500" width="900" frameborder="0" src="NFL_Stadiums.html" allowfullscreen></iframe></p>
+                        <p>The goal I set forth for this mini project was to create a proportional symbol map of all 32 NFL teams' stadiums, with the symbols being
+                            proportional to the average home game attendance. These values for average home attendance percentage can be found online, but I also had to include
+                            other pieces of information in the dataset - such as the stadium max capacity and the average home attendance - and because I had to make the 
+                            dataset myself instead of downloading an opensource dataset, I instead calculated my own average attendance percentage values through Excel with
+                            the data I had collected.
+                        </p>            
+                        <p>Although the map does a solid job in expressing stadium location and average attendance values, there are a few asteriks to note. First, the data 
+                            comes from the 2019 NFL season, as the 2020 season was greatly impacted by COVID. Despite COVID having an affect, I decided to represent al the current
+                            NFL stadium locations on the map. This means that although the Las Vegas Raiders now play at Allegiant Stadium (as shown on the map), the attendance data 
+                            is NOT for Allegiant Stadium and is for Oakland Colesium, since the Raiders moved permanently to Vegas for the 2020 season with no fans in attendance.
+                        </p>        
+                        <p>This also means that the attendance data for the Rams corresponds to 2019 attendance data of LA Memorial Coliseum, the Chargers 2019 data corresponds to 
+                            attendance at Dignity Park - which is also represented as both the Rams and Chargers now play at SoFi stadium, and I wanted the data to be more visible (no multiple
+                            data-points on the same spot). Lastly, since both the Giants and Jets play at MetLife and I myself am a longtime Giants fan, I put the rightful team's data
+                            point on top of MetLife, with the other team's data point located in the adjacent parking lot.
+                        </p>    
+                        <p>Source(s): Google Maps (for lattitude/longitude), Wikipedia (for current stadium names and capacity limits), ESPN.com (for the remaining data)</p>
+                        </p>
+                        <h1>MLB Stadium Proportional Symbol with Choropleth Shading</h1>
+                        <p style="text-align: center;"><iframe height="500" width="900" frameborder="0" src="MLB_Stadiums.html" allowfullscreen></iframe></p>
+                        <p>The description will go here.</p>
+                        <h1>QGIS Original Tracked Points Map</h1>
+                        <p style="text-align: center;"><iframe height="100%" width="100%" frameborder="0" src="data/RandomData.png" allowfullscreen></iframe></p>
+                        <p>The description will go here.</p>
+                        <h1 id="section1">Randomly Tracked Data with Interactivity</h1>
+                        <p style="text-align: center;"><iframe height="500" width="900" frameborder="0" src="TrackedPoints.html" allowfullscreen></iframe></p>
+                        <p>Demonstrates the pros of having an interactive map: seeing the actual routes taken by tracked person, determining the stops made, being able to see where
+                            tracked object was at certain point in time.</p>
+                    </div>
+                </div>
+                <div class="footer">
+                    <div id="footer">
+                        <div class="connect">
+                            <div>
+                                <h1>Visit me on Social Media.</h1>
+                                <div>
+                                    <a href="https://www.linkedin.com/in/jake-w-289749185/" class="icon linkedin">LinkedIn</a>
+                                    <a href="https://buffalo.joinhandshake.com/users/2759941" class="icon handshake">Handshake</a>
+                                    <a href="https://www.instagram.com/jake_wenger/" class="icon instagram">Instagram</a>
+                                    <a href="https://www.facebook.com/jake.wenger.9/" class="icon facebook">Facebook</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="footnote">
+                            <div>
+                                <p>&copy; 2020 Jake Wenger</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+     </body>
+ </body>
+</html>

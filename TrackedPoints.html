@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8' />
+    <title>NFL Stadiums & Average Attendance</title>
+    <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v2.2.0/mapbox-gl.js'></script>
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v2.2.0/mapbox-gl.css' rel='stylesheet' />
+    <style>
+        body { margin:0; padding:0; }
+        #map { position:absolute; top:0; bottom:0; width:100%; }
+      </style>
+</head>
+<body>
+    <div id="map"></div>
+    <script>
+        mapboxgl.accessToken = 'pk.eyJ1IjoiamFrZXdlbmciLCJhIjoiY2swbXZ3Y2o0MWJiZDNrbzIzMDNuM3JrMyJ9.uKs8zY43KAGtZJUOjGS-gQ';
+        var map = new mapboxgl.Map({
+            container: 'map',
+            style: 'mapbox://styles/jakeweng/ckqew3eqt372718md6vzb5du1',
+            center: [-79.470582, 39.714154],
+            zoom: 5.5,
+        });    
+        map.on('click', function (e) {
+            var features = map.queryRenderedFeatures(e.point, {
+                layers: ['TrackingData']
+            });
+            if (!features.length) {
+                return;
+            }
+            var feature = features[0];
+        
+            var popup = new mapboxgl.Popup({ offset: [0, -15]})
+                .setLngLat(feature.geometry.coordinates)
+                .setHTML(
+                    '<h3>Tracked Point ' + feature.properties.number + ' out of 3074</h3>' + '<p>' + feature.properties.time + '</p>'
+            )
+            .addTo(map);
+    });
+    map.getCanvas().style.cursor = 'default';
+    </script>
+</body>
+</html>
