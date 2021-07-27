@@ -1,0 +1,33 @@
+Team,Stadium,lat,long,Capacity,Avg_home,Percent_full
+Arizona Cardinals,State Farm Stadium,33.5277,-112.262608,"63,400","61,323",0.967239748
+Atlanta Falcons,Mercedes-Benz Stadium,33.75612601,-84.40020426,"71,000","71,601",1.008464789
+Baltimore Ravens,M&T Bank Stadium,39.277969,-76.622767,"71,008","70,627",0.994634407
+Buffalo Bills,Highmark Stadium,42.77556008,-78.78643882,"71,608","68,839",0.961331136
+Carolina Panthers,Bank of America Stadium,35.225808,-80.852861,"75,523","72,220",0.956264979
+Chicago Bears,Soldier Field,41.86242319,-87.61667659,"61,500","61,916",1.006764228
+Cincinnati Bengals,Paul Brown Stadium,39.09559911,-84.51597186,"65,515","47,179",0.720125162
+Cleveland Browns,First Energy Stadium,41.50623826,-81.69955882,"67,895","67,431",0.993165918
+Dallas Cowboys,AT&T Stadium,32.74743776,-97.09447244,"80,000","90,929",1.1366125
+Denver Broncos,Empower Field at Mile High,39.7440132,-105.0200987,"76,125","75,937",0.997530378
+Detroit Lions,Ford Field,43.09192701,-82.43351487,"65,000","61,342",0.943723077
+Green Bay Packers,Lambeau Field,44.50150891,-88.06216538,"81,441","77,845",0.955845336
+Houston Texans,NRG Stadium,29.68486167,-95.41049282,"72,220","71,793",0.99408751
+Indianapolis Colts,Lucas Oil Field,39.760056,-86.163806,"67,000","61,110",0.912089552
+Jacksonville Jaguars,TIAA Bank Field,30.32405804,-81.63731751,"69,132","63,085",0.912529653
+Kansas City Chiefs,Arrowhead Stadium,39.04948898,-94.4838835,"76,416","73,465",0.961382433
+Las Vegas Raiders,Allegiant Stadium*,36.09103119,-115.1833222,"56,057","52,549",0.93742084
+Los Angeles Chargers,SoFi Stadium*,33.86441735,-118.2611052,"27,000","31,750",1.175925926
+Los Angeles Rams,SoFi Stadium*,33.95330065,-118.3384591,"77,500","71,229",0.919083871
+Miami Dolphins,Hard Rock Stadium,25.95798931,-80.23884677,"65,326","63,067",0.965419588
+Minnesota Vikings,U.S. Bank Stadium,44.97379026,-93.25738721,"66,655","66,849",1.002910509
+New England Patriots,Gilette Stadium,42.09109703,-71.26435722,"66,829","65,753",0.983899205
+New Orleans Saints,Mercedes-Benz Superdome,29.95125618,-90.08110472,"73,208","73,082",0.998278877
+New York Giants,MetLife Stadium,40.81365251,-74.07418877,"82,500","74,664",0.905018182
+New York Jets,MetLife Stadium,40.812194,-74.076983,"82,500","78,523",0.951793939
+Philadelphia Eagles,Lincoln Financial Field,39.90092976,-75.16755075,"69,596","69,783",1.002686936
+Pittsburgh Steelers,Heinz Field,40.446786,-80.015761,"68,400","62,237",0.909897661
+San Francisco 49ers,Levi's Stadium,37.40332746,-121.9694018,"68,500","70,305",1.026350365
+Seattle Seahawks,Lumen Field,47.59523132,-122.3315925,"69,000","68,990",0.999855072
+Tampa Bay Buccaneers,Raymond James Stadium,27.975967,-82.50335,"65,890","51,898",0.787646077
+Tennessee Titans,Nissan Stadium,36.166461,-86.771289,"69,143","64,509",0.932979477
+Washington,FedEx Field,38.90779353,-76.86443811,"82,000","65,488",0.798634146
