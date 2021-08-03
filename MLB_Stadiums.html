@@ -9,10 +9,45 @@
     <style>
         body { margin:0; padding:0; }
         #map { position:absolute; top:0; bottom:0; width:100%; }
+        h2, h3 {
+            margin: 10px;
+            font-size: 1.2em;
+            text-align: center;
+        }
+        h3 {
+            font-size: 1em;
+        }
+        strong {
+            font-size: 1em;
+            text-align: center;
+        }
+        p {
+            font-size: 0.85em;
+            margin: 10px;
+            text-align: center;
+        }
+        .map-overlay {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            background: rgba(255, 255, 255, 0.8);
+            margin-right: 20px;
+            font-family: Arial, sans-serif;
+            overflow: auto;
+            border-radius: 3px;
+        }
+        #features {
+            top: 0;
+            height: 100px;
+            margin-top: 20px;
+            width: 250px;
+         }
       </style>
 </head>
 <body>
     <div id="map"></div>
+    <div class='map-overlay' id='features'><h2>Stadiums Home to an MLB Team</h2><div id='pd'><p>Click any stadium for more info!</p></div></div>
+    
     <script>
         mapboxgl.accessToken = 'pk.eyJ1IjoiamFrZXdlbmciLCJhIjoiY2swbXZ3Y2o0MWJiZDNrbzIzMDNuM3JrMyJ9.uKs8zY43KAGtZJUOjGS-gQ';
         var map = new mapboxgl.Map({

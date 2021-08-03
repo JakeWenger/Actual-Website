@@ -41,34 +41,39 @@
                         <h2>Independent Works</h2>
                         <h1>NFL Stadium Proportional Symbol Map</h1>
                         <p style="text-align: center";><iframe height="500" width="900" frameborder="0" src="NFL_Stadiums.html" allowfullscreen></iframe></p>
-                        <p>The goal I set forth for this mini project was to create a proportional symbol map of all 32 NFL teams' stadiums, with the symbols being
-                            proportional to the average home game attendance. These values for average home attendance percentage can be found online, but I also had to include
-                            other pieces of information in the dataset - such as the stadium max capacity and the average home attendance - and because I had to make the 
-                            dataset myself instead of downloading an opensource dataset, I instead calculated my own average attendance percentage values through Excel with
-                            the data I had collected.
-                        </p>            
-                        <p>Although the map does a solid job in expressing stadium location and average attendance values, there are a few asteriks to note. First, the data 
-                            comes from the 2019 NFL season, as the 2020 season was greatly impacted by COVID. Despite COVID having an affect, I decided to represent al the current
-                            NFL stadium locations on the map. This means that although the Las Vegas Raiders now play at Allegiant Stadium (as shown on the map), the attendance data 
-                            is NOT for Allegiant Stadium and is for Oakland Colesium, since the Raiders moved permanently to Vegas for the 2020 season with no fans in attendance.
-                        </p>        
-                        <p>This also means that the attendance data for the Rams corresponds to 2019 attendance data of LA Memorial Coliseum, the Chargers 2019 data corresponds to 
-                            attendance at Dignity Park - which is also represented as both the Rams and Chargers now play at SoFi stadium, and I wanted the data to be more visible (no multiple
-                            data-points on the same spot). Lastly, since both the Giants and Jets play at MetLife and I myself am a longtime Giants fan, I put the rightful team's data
-                            point on top of MetLife, with the other team's data point located in the adjacent parking lot.
-                        </p>    
-                        <p>Source(s): Google Maps (for lattitude/longitude), Wikipedia (for current stadium names and capacity limits), ESPN.com (for the remaining data)</p>
+                        <p>The goal I set for this mini project was to create a proportional symbol map of all 32 NFL teams' stadiums, with the symbols being proportional to the average home game attendance. These values for average home attendance percentage can be found online, but I also had to include other pieces of information in the dataset - such as the stadium max capacity and the average home attendance - and because I had to make the dataset myself instead of downloading an open source dataset, I instead calculated my own average attendance percentage values through Excel with the data I had collected.
                         </p>
-                        <h1>MLB Stadium Proportional Symbol with Choropleth Shading</h1>
+                        <p>Although the map does a great job in expressing stadium location and average attendance values, there are a few asteriks to note. First, the data comes from the 2019 NFL season, as the 2020 season was greatly impacted by COVID. Despite COVID having an effect, I decided to represent all the current NFL stadium locations on the map. This means that although the Las Vegas Raiders now play at Allegiant Stadium, the attendance data is NOT for Allegiant Stadium and is for Oakland Coliseum.
+                        </p>   
+                        <p>Additionally, the Rams and Chargers attendance data corresponds to 2019 attendance values at LA Memorial Coliseum and Dignity Park, respectively. To avoid the same data points from directly overlapping on top of one another, the data point for the Chargers and SoFi Stadium really represents the location of Dignity Park - the Rams’ data point correctly shows the location of SoFi stadium. Since the Meadowlands Complex is fairly large, I was able to keep the data points for the Giants and Jets fairly accurate.
+                        </p>       
+                        <p>Data sources: Google Maps, ESPN.com, Wikipedia</p>
+                        </p>
+                        <h1 id="section2">MLB Stadium Proportional Symbol with Choropleth Shading</h1>
                         <p style="text-align: center;"><iframe height="500" width="900" frameborder="0" src="MLB_Stadiums.html" allowfullscreen></iframe></p>
-                        <p>The description will go here.</p>
+                        <p>Building on top of the first project, I wanted to create a more detailed interactive map, this time displaying the locations of all 30 MLB teams. Like the NFL map, the data points range in size depending on the average home attendance for the 2019 season, however each point has shading to indicate how old each MLB stadium is.
+                        </p>
+                        <p>I created my own CSV file as I had done for the NFL map, though this time I included more pieces of data besides stadium age, such as including the city location of each stadium, as well as including the actual average attendance values for each MLB team and stadium.
+                        </p>
+                        <p>Sources: Google Maps, ESPN.com, Wikipedia
+                        </p>
                         <h1>QGIS Original Tracked Points Map</h1>
-                        <p style="text-align: center;"><iframe height="100%" width="100%" frameborder="0" src="data/RandomData.png" allowfullscreen></iframe></p>
-                        <p>The description will go here.</p>
+                        <a href="data/RandomData.png" target="_blank" class="button">QGIS Map</a>
+                        <p>Originally created for a school project my friend was working on, this map depicts over 3,000 randomly tracked data points of a random suspect’s activity in Pennsylvania and elsewhere. With his group project being tasked to evaluate this user’s activity and determine the location of either a theoretical hideout or safehouse the tracked individual was based out of, my friend reached out to me to see if I could use his CSV data and create a map from the data in order to evaluate the routes taken by this random user. I provided him with the map above to use for presentation purposes, as well as a more rough version he and his group used to further evaluate the tracked person’s movements.
+                        </p>
+                        <p>Source: Mercyhurst University
+                        </p>
                         <h1 id="section1">Randomly Tracked Data with Interactivity</h1>
                         <p style="text-align: center;"><iframe height="500" width="900" frameborder="0" src="TrackedPoints.html" allowfullscreen></iframe></p>
-                        <p>Demonstrates the pros of having an interactive map: seeing the actual routes taken by tracked person, determining the stops made, being able to see where
-                            tracked object was at certain point in time.</p>
+                        <p>I decided I wanted to take the tracked data and bring it into Mapbox to create an interactive map that provided the map user meta data on each tracked point. Additionally, since the points were organized in the order they were recorded, I color coded the points to range from pink to aqua to further visualize what data point was recorded first and last, with neon pink being the first data point and neon aqua being the last. 
+                        </p>
+                        <p>First thing to note is because there are so many data points being recorded in a relatively short period of time, you can zoom into certain points and see if the individual made a wrong turn, or in one case stopped at Burger King for something to eat. More importantly, though, since the points are color coded, you can zoom in to look for an area with mixed blue and pink data points to determine areas of interest. And by looking at the map, we can see a few clusters of data points, one around Mercyhurst University and the other around Stafford Street. A third but more subtle cluster was around a Wegmans in Erie.
+                        </p>
+                        <p>Sources: Mercyhurst University
+                        </p>
+                        <h1>Future Goals</h1>
+                        <p>With the stadium maps, the final goal for this overarching project I laid out for myself is to create a combined map, where the user can toggle between showing MLB stadium locations, NFL stadium locations, or both. I also plan to create a Phoenix metro area map where the user can toggle between different fields, such as going from displaying the total population of each city to displaying the poverty rate in each city. 
+                        </p>
                     </div>
                 </div>
                 <div class="footer">
@@ -86,7 +91,7 @@
                         </div>
                         <div class="footnote">
                             <div>
-                                <p>&copy; 2020 Jake Wenger</p>
+                                <p>&copy; 2021 Jake Wenger</p>
                             </div>
                         </div>
                     </div>

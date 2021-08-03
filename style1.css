@@ -54,7 +54,7 @@ img {
 
 #header div ul li a:hover {
     background-color: #d8f1ec;
-    color: #3d7085;
+    color: #4d638c;
 }
 
 .drop {
@@ -135,8 +135,9 @@ img {
 .home .body {
     background-color: #447374;
     overflow: hidden;
-    max-width: 1400px;
+    max-width: 1250px;
     margin: auto;
+    padding-bottom: 50px;
 }
 
 .home .body .image img {
@@ -198,9 +199,30 @@ img {
     font-family: 'Times New Roman', Times, serif;
     font-size: 18px;
     margin: 25px;
-    padding: 25px;
+    padding-top: 15px;
     text-align:start;
     color: #d8f1ec;
+}
+
+.button {
+    text-align: center;
+    font-size: 18px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-color: none;
+    background-position: 50%;
+    border: 2px solid white;
+    border-radius: 5px;
+    color: #d8f1ec;
+    padding: 20px;
+    margin: 20px;
+    display: block;
+    position: relative;
+}
+
+.button:hover {
+    background-color: #d8f1ec;
+    color: #4d638c;
+    font-weight: bold;
 }
 
 .image {
