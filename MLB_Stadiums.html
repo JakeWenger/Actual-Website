@@ -42,11 +42,25 @@
             margin-top: 20px;
             width: 250px;
          }
+         #legend {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            background: rgba(255, 255, 255, 0.8);
+            margin-left: 20px;
+            margin-bottom: 35px;
+            height: 125px;
+            width: 200px;
+            font-family: Arial, sans-serif;
+            overflow: auto;
+            border-radius: 3px;
+        }
       </style>
 </head>
 <body>
     <div id="map"></div>
-    <div class='map-overlay' id='features'><h2>Stadiums Home to an MLB Team</h2><div id='pd'><p>Click any stadium for more info!</p></div></div>
+    <div id='legend'><h2>Key</h2><p>Darker shade indicates older stadium build year.</p><p>Dot size relative to attendance percetange.</p></div>
+    <div class='map-overlay' id='features'><h2>Stadiums Home to an MLB Team</h2><div id='pd'><p>Click any stadium for more info!</p></div>
     
     <script>
         mapboxgl.accessToken = 'pk.eyJ1IjoiamFrZXdlbmciLCJhIjoiY2swbXZ3Y2o0MWJiZDNrbzIzMDNuM3JrMyJ9.uKs8zY43KAGtZJUOjGS-gQ';
@@ -54,7 +68,7 @@
             container: 'map',
             style: 'mapbox://styles/jakeweng/ckq48pjlj2xi917lejxq22iac',
             center: [-95.549427, 39.033369],
-            zoom: 3.2,
+            zoom: 2.7,
         });    
         map.on('click', function (e) {
             var features = map.queryRenderedFeatures(e.point, {

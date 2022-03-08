@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset='utf-8' />
-    <title>NFL Stadiums & Average Attendance</title>
+    <title>MLB Stadiums & Average Attendance</title>
     <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
     <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v2.2.0/mapbox-gl.js'></script>
     <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v2.2.0/mapbox-gl.css' rel='stylesheet' />
@@ -38,18 +38,18 @@
         }
         #features {
             top: 0;
-            height: 100px;
+            height: 110px;
             margin-top: 20px;
             width: 250px;
          }
-         #legend {
+        #legend {
             position: absolute;
             bottom: 0;
             left: 0;
             background: rgba(255, 255, 255, 0.8);
             margin-left: 20px;
             margin-bottom: 35px;
-            height: 130px;
+            height: 125px;
             width: 200px;
             font-family: Arial, sans-serif;
             overflow: auto;
@@ -59,34 +59,36 @@
 </head>
 <body>
     <div id="map"></div>
-    <div id='legend'><h2>Key</h2><p>Dot size is relative to average home attednance, so a larger dot means a higher average home attendance percetange.</p></div>
-    <div class='map-overlay' id='features'><h2>Stadiums Home to an NFL Team</h2><div id='pd'><p>Click any stadium for more info!</p></div>
+    <div id='legend'><h2>Key</h2><p>Dark Shading = High Attendance %</p><p>Light Shading = Low Attendance %</p></div>
+    <div class='map-overlay' id='features'><h2>MLB and NFL Stadiums in North America</h2><div id='pd'><p>Click any stadium for more information!</p></div></div>
 
     <script>
         mapboxgl.accessToken = 'pk.eyJ1IjoiamFrZXdlbmciLCJhIjoiY2swbXZ3Y2o0MWJiZDNrbzIzMDNuM3JrMyJ9.uKs8zY43KAGtZJUOjGS-gQ';
         var map = new mapboxgl.Map({
             container: 'map',
-            style: 'mapbox://styles/jakeweng/ckpu87u4e1jzz17nxa1cev0yv',
+            style: 'mapbox://styles/jakeweng/cks6smhlm1fii18qqy1gemv6g',
             center: [-95.549427, 39.033369],
             zoom: 2.7,
-        });    
+        });
         map.on('click', function (e) {
             var features = map.queryRenderedFeatures(e.point, {
-                layers: ['NFLdata']
+                layers: ['MLB_data', 'NFL_data']
             });
             if (!features.length) {
                 return;
             }
             var feature = features[0];
-        
-            var popup = new mapboxgl.Popup({ offset: [0, -15]})
+ 
+            var popup = new mapboxgl.Popup({ offset: [0, -15] })
                 .setLngLat(feature.geometry.coordinates)
                 .setHTML(
-                    '<h3>' + feature.properties.Stadium + '</h3>' + '<p>Home of the ' + feature.properties.Team + '</p>'
+                    '<h3>' + feature.properties.Stadium + '</h3>' + '<p>Built in ' + feature.properties.Stadium_year  + '</p>' + '<p>Located in ' + feature.properties.City + '</p>'
+                    + '<p>Home of the ' + feature.properties.Team + '</p>' + '<p>Average home attedance for 2019 was ' + feature.properties.Avg_home + 
+                    ' (' + feature.properties.Per_capacity + ')</p>'
             )
             .addTo(map);
-    });
-    map.getCanvas().style.cursor = 'default';
+        });
+        map.getCanvas().style.cursor = 'default';
     </script>
 </body>
 </html>

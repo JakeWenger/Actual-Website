@@ -1,0 +1,80 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="ePortfolio" content="device-width, initial-scale=1.0">
+            <title>Jake Wenger ePortfolio</title>
+            <link rel="stylesheet" href="stylesheet.css" type="text/css">
+    </head>
+
+    <body>
+        <header id="page">
+            <div class="menu">
+                <ul>
+                    <li>
+                        <a href="index.html">Home</a>
+                    </li>
+                    <li>
+                        <a href="contact.html">Contact Info</a>
+                    </li>
+                    <li>
+                        <a href="about.html">About Myself</a>
+                    </li>
+                    <li class="menu-drop">
+                        <a href="projects.html">Projects</a>
+                        <ul class="drop">
+                            <li>
+                                <a href="reach11.html">Current Project</a>
+                                <a href="mini-projects.html">Mini Projects (with Mapbox)</a>
+                                <a href="curricular.html">GIS Curricular Works</a>
+                                <a href="curricular-other.html">Other Curricular Works</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+            <div>
+                <div class="content">
+                    <h1>Current Project</h1>
+                    <h2 id="15">Reach 11 Recreational Park: Trail Mapping Project</h2>
+                        <p>
+                            The Reach 11 Trail Mapping Project is a data collecting task I started conducting back in October 2021. My goal for the project is to collect data on all the different trails, trail entrances, markers, info boards, and other various pieces of data into a dataset utilizing the ArcGIS QuickCapture application – and then creating a map or maps of the Reach 11 recreational area. The reasoning behind the project was to learn about ArcGIS’ QuickCapture app and how you can create interactive forms to collect data on the go – I was looking for an application to collect data on Reach 11 and the QuickCapture app was great for that task. 
+                        </p>
+                        <p>
+                            I also wanted to conduct my first real independent project besides the smaller Mapbox projects I had made, to better demonstrate some of my capabilities with geospatial science. And on top of that, I wanted to create my own dataset for public use, with the dataset focused on the trail marker, info boards, and entrances/exits to the various trails. Other pieces of data I collected - such as the trail paths themselves - are already available to the public through services like OpenStreetMaps.
+                        </p>
+                        <div class="image">
+                            <img src="images/Reach11Table.png" alt="data-table" height="75%" width="75%">                       
+                        </div>
+                        <p>
+                            QuickCapture was incredibly useful for this project. Through ArcGIS Online, you’re able to create your own forms for mobile data collection in the field using the QuickCapture app. Besides being able to collect data on-the-go, the accuracy of the data being collected was sound. While not all the data collected will be useful, as some of it is already in the public domain – some pieces of data such as the trail markers and info boards aren’t as readily available for public viewing compared to trail paths or parking lots.
+                        </p>
+                        <div class="embed-container">
+                            <iframe frameborder="0" scrolling="no" title="Reach 11 0302 View Map" src="http://maps.arcgis.com/apps/Embed/index.html?webmap=50b150d4fe104520b0fdff1e545a5597&extent=-112.1037,33.6145,-111.8501,33.7372&zoom=true&previewImage=false&scale=true&legendlayers=true&basemap_toggle=true&alt_basemap=streets&disable_scroll=true&theme=dark"></iframe>
+                        </div>                   
+                        <p>Utilizing Map Viewever Classic, I was able to create an interactive map of the raw data I collected by creating a view-only layer and using that to make my interactive map. This particular map was made for the purpose of being embeded onto my ePortfolio, but I have another map file of the Reach 11 dataset that I utilized and regularly updated while collecting data on the recreational park. This was to help myself validate the data I was collecting - preventing myself from creating multiple entries of the same feature, or thinking that a feature had already been logged when in reality I had actually missed said feature.
+                        </p>
+                        <p>
+                            Currently, my remaining goals for this project are to create a static map of Reach 11 Recreational Park. I also want to create a finalized database of trail markers, info boards and entrances-exits to the park, as well as completeing the Reach 11 project section with accompanying descriptions, links and photos.
+                        </p>
+                </div>
+                <div class="connect">
+                    <h5>Find me on these platforms.</h5>
+                        <ul>
+                            <li class="icon">
+                                <a href="https://www.linkedin.com/in/jake-w-289749185/" class="linked-in">LinkedIn</a>
+                                <a href="https://github.com/JakeWenger" class="github">GitHub</a>
+                                <a href="https://ind-18.maps.arcgis.com/home/index.html" class="arcgis">ArcGIS Online</a>
+                                <a href="https://www.instagram.com/jake_wenger/" class="instagram">Instagram</a>
+                                <a href="https://www.facebook.com/jake.wenger.9/" class="facebook">Facebook</a>
+                            </li>
+                        </ul>
+                </div>
+                <div class="footnote">
+                    <p>&copy; 2022 Jake Wenger</p>
+                </div>
+            </div>
+        </header>
+    </body>
+</html>

@@ -1,0 +1,311 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anonymous+Pro&display=swap');
+/* <a href="https://www.freepik.com/vectors/background">Background vector created by freepik - www.freepik.com</a> */
+* {
+    font-family: 'Courier New', Courier, monospace;
+    letter-spacing: 3px;
+}
+h1 {
+    font-family: 'Ubuntu Mono', monospace;
+    font-size: 72px;
+    color: #F8F0E3;
+}
+h2 {
+    font-family: 'Anonymous Pro', monospace;
+    font-size: 56px;
+    color: #F8F0E3;
+}
+h3 {
+    font-family: 'Ubuntu Mon', monospace;
+    font-size: 32px;
+    color: #F8F0E3;
+}
+h4 {
+    font-family: 'Ubuntu Mon', monospace;
+    font-size: 24px;
+    color: #F8F0E3;
+}
+h5 {
+    font-family: 'Red Hat Mono', monospace;
+    font-size: 20px;
+    color: #F8F0E3;
+}
+p {
+    font-family: 'Red Hat Mono', monospace;
+    font-size: 18px;
+    color: #F8F0E3;
+}
+ul {
+    list-style-type: none;
+}
+
+/* MENU BAR */
+
+.menu ul {
+    list-style: none;
+    overflow: auto;
+	margin: 0;
+	padding: 0;
+    text-align: center;
+    align-items: center;
+    background-color: #706085;
+    opacity: .85;
+}
+#page .menu ul {
+    opacity: 100%;
+}
+.menu ul li {
+    display: inline-block;
+}
+.menu ul li a {
+	color:#F8F0E3;
+    background-color: #706085;
+    opacity: .85;
+	display: block;
+	font-family: 'Ubuntu Mon', monospace;
+	font-size: 21px;
+	font-weight: bold;
+	line-height: 50px;
+	margin: 0;
+	min-height: 50px;
+	padding: 0 30px;
+	text-align: center;
+	text-transform: capitalize;
+    opacity: .85;
+}
+.menu ul li a:hover {
+    color: #706085;
+    background: #F8F0E3;
+}
+.drop {
+	display: block;
+	position: absolute;
+    visibility: hidden;
+    left: 1184px;
+	top: 50px;
+	width: auto;
+}
+#page .drop {
+    left: 1176px;
+}
+.menu-drop:hover .drop {
+    left: 1184px;
+    visibility: visible;
+    opacity: 1.0;
+}
+
+/* HEADER & BODY CSS */
+
+#home {
+    background: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url("images/Test2.png");
+    background-color: #85606e;
+    height: 100vh;
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+}
+#page {
+    background-color: #c27d7a;
+    background: url(images/contours2.jpg) repeat;
+    background-attachment: fixed;
+    max-height: 99999px;
+    justify-content: center;
+    background-size: 100%;
+    position: relative;
+}
+.welcome {
+    text-align: center;
+    padding-top: 10%;
+    padding-bottom: 2%;
+}
+body {
+    margin: 0;
+	padding: 0;
+	position: relative;
+	width: auto;
+    height: 100%;
+    overflow: visible;
+}
+.content {
+    background-color: #594049;
+    overflow: hidden;
+    max-width: 70%;
+    min-width: 750px;
+    margin: auto;
+    padding-bottom: 300px;
+}
+.content h1, h2, h3 {
+    text-align: center;
+    padding: 0 0 0 0;
+    margin: 50px 75px 20px 75px;
+}
+.content p, h4 {
+    text-align: left;
+    margin-top: 35px;
+    margin-bottom: 35px;
+    margin-right: 100px;
+    margin-left: 100px;
+}
+.iframe {
+    border: none;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 50px;
+    padding-top: 25px;
+    float: center;
+    scroll-behavior: smooth;
+    height: 500px;
+    width: 700px;
+}
+.image {
+    text-align: center;
+}
+#contact {
+    text-align: center;
+}
+
+/* ARCGIS STYLING */
+
+.embed-container { 
+    position: relative;
+    left: -30px; 
+    bottom: 40px;
+    height: 500px;
+    width: 700px; 
+    text-align: center;
+    max-width: 100%;
+    max-height: 100%;
+    padding-top: 40px;
+}
+.embed-container object, .embed-container iframe { 
+    position: absolute; 
+    width: 100%; 
+    height: 100%;
+}
+
+/* BUTTON & HOVER EFFCTS */
+
+.interactive, .interactive ul li {
+    display: flex;
+    justify-content: center;
+}
+.button {
+    text-align: center;
+    position: relative;
+    align-items: center;
+    display: inline-block;
+    font-family: 'Red Hat Mono', monospace;
+    font-size: 20px;
+    background-color: #85606e;
+    border:rgba(0, 0, 0, 0.25) 2px solid;
+    border-radius: 2px;
+    color: #F8F0E3;
+    padding: 7px 7px 7px 7px;
+    margin: 15px 15px 15px 15px;
+}
+#list {
+    left: -20px;
+}
+#home-button {
+    left: -40px;
+}
+.button:hover {
+    transition: ease-out 0.75s;
+    height: auto;
+    width: auto;
+    box-shadow: inset 500px 0 0 0 #b89dda;
+    color: #faf9f6;
+    font-weight: bold;
+}
+#list.button {
+    display: flex;
+}
+
+/* FOOTER STYLE */
+
+.connect {
+    background-color: #706085;
+    opacity: .85;
+    overflow: hidden;
+    padding: 0 0 0 0;
+    margin: 0 0 0 0;
+    width: 100%;
+    bottom: 70px;
+    position: absolute;
+    display: block;
+    text-align: center;
+}
+#page .connect {
+    opacity: 100%;
+}
+.icon a {
+    position: relative;
+    padding: 10px;
+    width: 48px;
+    height: 48px;
+    text-align: center;
+    text-decoration: none;
+    text-indent: -99999px;
+    margin: 0px 15px 0px 15px;
+    display: inline-block;
+    overflow: visible;
+    right: 15px;
+}
+.icon a.linked-in {
+    background: url(images/linked_in.png) no-repeat;
+}
+.icon a.github {
+    background: url(images/github.png) no-repeat;
+}
+.icon a.arcgis {
+    background: url(images/arcgis.png) no-repeat;
+}
+.icon a.instagram {
+    background: url(images/insta.png) no-repeat;
+}
+.icon a.facebook {
+    background: url(images/facebook.png) no-repeat;
+}
+.linked-in:hover {
+    opacity: 0.7;
+}
+.github:hover {
+    opacity: 0.7;
+}
+.instagram:hover {
+    opacity: 0.7;
+}
+.facebook:hover {
+    opacity: 0.7;
+}
+.arcgis:hover {
+    opacity: 0.7;
+}
+
+/* FOOTNOTE */
+
+.footnote {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: #F8F0E3;
+    min-height: 70px;
+    overflow: visible;
+    display: flex;
+}
+.footnote p {
+	color: #85606e;
+	display: block;
+	font-family: monospace;
+	font-size: 12px;
+	margin: auto;
+	text-align: center;
+	text-transform: uppercase;
+	width: auto;
+    height: auto;
+    overflow: visible;
+}

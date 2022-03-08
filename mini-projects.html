@@ -1,0 +1,91 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="ePortfolio" content="device-width, initial-scale=1.0">
+            <title>Jake Wenger ePortfolio</title>
+            <link rel="stylesheet" href="stylesheet.css" type="text/css">
+    </head>
+
+    <body>
+        <header id="page">
+            <div class="menu">
+                <ul>
+                    <li>
+                        <a href="index.html">Home</a>
+                    </li>
+                    <li>
+                        <a href="contact.html">Contact Info</a>
+                    </li>
+                    <li>
+                        <a href="about.html">About Myself</a>
+                    </li>
+                    <li class="menu-drop">
+                        <a href="projects.html">Projects</a>
+                        <ul class="drop">
+                            <li>
+                                <a href="reach11.html">Current Project</a>
+                                <a href="mini-projects.html">Mini Projects (with Mapbox)</a>
+                                <a href="curricular.html">GIS Curricular Works</a>
+                                <a href="curricular-other.html">Other Curricular Works</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+            <div>
+                <div class="content">
+                    <h3>Mini-Projects using Mapbox</h3>
+                    <h1 id="6">NFL Stadium Proportional Symbol Map</h1>
+                        <p style="text-align: center";><iframe class="iframe" frameborder="0" src="NFL_Stadiums.html" allowfullscreen></iframe></p>
+                        <p>The goal I set for this mini project was to create a proportional symbol map of all 32 NFL teams' stadiums, with the symbols being proportional to the average home game attendance. These values for average home attendance percentage can be found online, but I also had to include other pieces of information in the dataset - such as the stadium max capacity and the average home attendance - and because I had to make the dataset myself instead of downloading an open source dataset, I instead calculated my own average attendance percentage values through Excel with the data I had collected.
+                        </p>
+                        <p>Although the map does a great job in expressing stadium location and average attendance values, there are a few asteriks to note. First, the data comes from the 2019 NFL season, as the 2020 season was greatly impacted by COVID. Despite COVID having an effect, I decided to represent all the current NFL stadium locations on the map. This means that although the Las Vegas Raiders now play at Allegiant Stadium, the attendance data is NOT for Allegiant Stadium and is for Oakland Coliseum.
+                        </p>   
+                        <p>Additionally, the Rams and Chargers attendance data corresponds to 2019 attendance values at LA Memorial Coliseum and Dignity Park, respectively. To avoid the same data points from directly overlapping on top of one another, the data point for the Chargers and SoFi Stadium really represents the location of Dignity Park - the Rams’ data point correctly shows the location of SoFi stadium. Since the Meadowlands Complex is fairly large, I was able to keep the data points for the Giants and Jets fairly accurate.
+                        </p>       
+                    <h1 id="7">MLB Stadium Proportional Symbol with Choropleth Shading</h1>
+                        <p style="text-align: center;"><iframe class="iframe" frameborder="0" src="MLB_Stadiums.html" allowfullscreen></iframe></p>
+                        <p>Building on top of the first project, I wanted to create a more detailed interactive map, this time displaying the locations of all 30 MLB teams. Like the NFL map, the data points range in size depending on the average home attendance for the 2019 season, however each point has shading to indicate how old each MLB stadium is.
+                        </p>
+                        <p>I created my own CSV file as I had done for the NFL map, though this time I included more pieces of data besides stadium age, such as including the city location of each stadium, as well as including the actual average attendance values for each MLB team and stadium.
+                        </p>
+                    <h1 id="8">QGIS Original Tracked Points Map</h1>
+                        <div class="interactive">
+                            <a href="data/Tracking Data Full Map.pdf" target="_blank" class="button interactive">QGIS Static Tracked Points Map</a>
+                        </div>
+                        <p>Originally created for a school project a friend was working on, this map depicts over 3,000 randomly tracked data points of a theoretical suspect’s activity in Erie, Pennsylvania and elsewhere. With his group project being tasked to evaluate this suspect's activity and determine the location of either a theoretical hideout or safehouse the tracked individual was based out of, my friend reached out to me to see if I could use his CSV data and create a map from the data in order to evaluate the routes taken by the individual of interest. As a result, I provided him with the map above to utilize as a part of their project.
+                        </p>
+                    <h1 id="9">Tracked Points with Interactivity</h1>
+                        <p style="text-align: center;"><iframe class="iframe" frameborder="0" src="TrackedPoints.html" allowfullscreen></iframe></p>
+                        <p>I decided I wanted to take the tracked data and bring it into Mapbox to create an interactive map that provided the map user meta data on each tracked point. Additionally, since the points were organized in the order they were recorded, I color coded the points to range from pink to aqua to further visualize what data point was recorded first and last, with neon pink being the first data point and neon aqua being the last. 
+                        </p>
+                        <p>First thing to note is because there are so many data points being recorded in a relatively short period of time, you can zoom into certain points and see if the individual made a wrong turn, or in one case stopped at Burger King for something to eat. More importantly, though, since the points are color coded, you can zoom in to look for an area with mixed blue and pink data points to determine areas of interest. And by looking at the map, we can see a few clusters of data points, one around Mercyhurst University and the other around Stafford Street. A third but more subtle cluster was around a Wegmans in Erie.
+                        </p>
+                    <h1 id="10">Combined Stadiums Map</h1>
+                        <p style="text-align: center;"><iframe class="iframe" frameborder="0" src="Stadiums_Final.html" allowfullscreen></iframe></p>
+                        <p>Following work on the combined stadiums map, I unfortunately came to the conclusion that I couldn’t create a way to toggle the different league-specific stadiums on and off, at least in the way I had hoped. Creating togglable layers with Mapbox adds new layers through the use of HTML and JavaScript, which can be great for visualization purposes but the information being conveyed - that is the variation in dot color according to average home attendance - would be lost. However, I still wanted to create a finalized map of the NFL and MLB stadiums to wrap up my small Mapbox project, so I took a different approach instead.
+                        </p>
+                        <p>Distinguishing the two different leagues, I highlighted all MLB stadiums with a navy blue stroke, and all NFL stadiums with a burgundy red stroke - since the Oakland Raiders have moved and are the Las Vegas Raiders, no stadium hosts both an NFL and MLB team. Additionaly, the hue of the various stadiums changes with attendance - higher average home attendance means the hue will be darker and more saturated in color. 
+                        </p>
+                </div>
+                <div class="connect">
+                    <h5>Find me on these platforms.</h5>
+                        <ul>
+                            <li class="icon">
+                                <a href="https://www.linkedin.com/in/jake-w-289749185/" class="linked-in">LinkedIn</a>
+                                <a href="https://github.com/JakeWenger" class="github">GitHub</a>
+                                <a href="https://ind-18.maps.arcgis.com/home/index.html" class="arcgis">ArcGIS Online</a>
+                                <a href="https://www.instagram.com/jake_wenger/" class="instagram">Instagram</a>
+                                <a href="https://www.facebook.com/jake.wenger.9/" class="facebook">Facebook</a>
+                            </li>
+                        </ul>
+                </div>
+                <div class="footnote">
+                    <p>&copy; 2022 Jake Wenger</p>
+                </div>
+            </div>
+        </header>
+    </body>
+</html>

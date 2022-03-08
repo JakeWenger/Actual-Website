@@ -1,0 +1,113 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="ePortfolio" content="device-width, initial-scale=1.0">
+            <title>Jake Wenger ePortfolio</title>
+            <link rel="stylesheet" href="stylesheet.css" type="text/css">
+    </head>
+
+    <body>
+        <header id="page">
+            <div class="menu">
+                <ul>
+                    <li>
+                        <a href="index.html">Home</a>
+                    </li>
+                    <li>
+                        <a href="contact.html">Contact Info</a>
+                    </li>
+                    <li>
+                        <a href="about.html">About Myself</a>
+                    </li>
+                    <li class="menu-drop">
+                        <a href="projects.html">Projects</a>
+                        <ul class="drop">
+                            <li>
+                                <a href="reach11.html">Current Project</a>
+                                <a href="mini-projects.html">Mini Projects (with Mapbox)</a>
+                                <a href="curricular.html">GIS Curricular Works</a>
+                                <a href="curricular-other.html">Other Curricular Works</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+            <div>
+                <div class="content">
+                    <h3>GEO485 - Cartography & Geographic Visualization</h3>
+                        <h1 id="1">Rodent Incidence in Buffalo</h1>
+                        <p style="text-align: center;"><iframe class="iframe" frameborder="0" src="rodents.html" allowfullscreen></iframe></p>
+                        <p>Originally created in my Cartography & Geographic Visualization class, this is a choropleth map depicting the varying number of rodents found per census tract
+                            in the city of Buffalo. The map version seen above is a recreated file using the original data and steps, as the original chortopleth map had a few errors I
+                            wasn't able to identify at first in regards to the map's interactivity. However, through troubleshooting and some patience I managed to identify any mistakes made 
+                            in the original web map to create a fully finished form, as seen above.
+                        </p>
+                        <p>
+                            For this project, we utilized rodent census tract data given to us in class and the online webmapping service Mapbox (in addition to HTML coding) to create an
+                            interactive choropleth map. Simply by uploading the GEOjson file, I was able to bring the uploaded data into a preset styleized map provided by Mapbox, and by 
+                            selecting the "incidence" field and create breaks using Jenks natural breaks method, I was able to create a choropleth map representing the varying incidence levels 
+                            of rats throughout the city of Buffalo.
+                        </p>
+                        <p>
+                            While the base map and data visualization were made in Mapbox Studio, the rest of the project was done via HTML coding. We utilized HTML to create the info box
+                            in the top right corner, the legend in the bottom right, and most importantly HTML was used to create the interactivity function of the map. The callback function
+                            is what makes the hover function work, which forbids to entire code from being executed upon loading in the map - only when an event occurs (in this case hovering over 
+                            a tract) will the additional code be executed.
+                        </p>
+                        <h1 id="2">Simple Proportional Symbol Map</h1>
+                        <p style="text-align: center;"><iframe class="iframe" frameborder="0" src="propsymbols.html" allowfullscreen></iframe></p>
+                        <p>Related to the interactive choropleth map above, this map was made in QGIS and Mapbox, and depicts the number of rodent incidence rates per council district, rather than 
+                            census tracts as in the other map. The map is a simple proportional symbol map, meaning a larger dot indicates a district with high rodent incidence, while smaller dots 
+                            represent districts with lower incidenct rates. Proportional maps are also known as Graduated Point maps, since the points or symbols <i>graduate</i> in size and intensity
+                            with regards to the data being mapped and visualized.
+                        </p>
+                        <p>
+                            QGIS was used to bring in the CSV file containing the rodent incidence data in order to create the graduated points layer. This new file was then brought into Mapbox 
+                            along with the council district data in a pre-made map style to visually represent the council district boundaries with the corresponding rodent incidence points.
+                        </p>
+                        <h1 id="3">Vacant Lots in Buffalo</h1>
+                        <p style="text-align: center;"><iframe class="iframe" scrolling="no" frameborder="0" src="vacant.html" allowfullscreen></iframe></p>
+                        <p>Another project revolving around the use of JavaScript to create an interactive map, the map above utilized data from <i>OpenData - Buffalo</i> to create an interactive
+                           webmap that not only shows each individual vacant lot, but it also allows the user to click on each lot to see the sale price. The focus of this assignment was to introduce us 
+                           to Leaflet, one of JavaScript's most popular open-source libraries used for creating webmaps such as the one above. Although we didn't go further into learning about Leaflet,
+                        </p>
+                    <h3>GEO419 - Transportaion & Society</h3>
+                        <h1 id="4">The Queen City 2050</h1>
+                        <div class="interactive">
+                            <a href="GIS-Related/TheQueenCity2050.jpg" target="_blank" class="button">The Queen City 2050 Proposal Map</a>
+                        </div>
+                        <p>Created in Google Earth for my Transportation & Society class, this was a part of a larger final group project where each group was tasked with coming up with and evaluating proposed expansions of the NFTA light rail line in Buffalo. I decided to use Google Earth to create this map due to the ease of creating geometrical features on a basemap and the ability to evaluate those same geometries you created in regards to the basemap. This made it easy to plot all the proposed new light rail stations and lines, but more importantly it made it incredibly easy to determine the total distance of each route as well as the distance from station A to station B, which made calculating the costs based off of the project instructions less challenging. 
+                        </p>
+                    <h3>GEO481 - Geographic Info Systems</h3>
+                        <h1 id="5">My First Maps</h1>
+                        <div class="interactive">
+                            <a href="GIS-Related/Lab1/jakeweng_map1.pdf" target="_blank" class="button">Map 1</a>
+                            <a href="GIS-Related/Lab1/jakeweng_map2.pdf" target="_blank" class="button">Map 2</a>
+                            <a href="GIS-Related/Lab1/jakeweng_map3.pdf" target="_blank" class="button">Map 3</a>
+                        </div>
+                        <p>The buttons above open the first three maps I made as a GIS major when attending school in Buffalo. This was also my first time using ArcGIS' ArcMap program to create professionally-made maps using census data. Our assignment was straight-forward: we were given census data on the Buffalo metropolitan area specifically, and with that census data we needed to create three maps - two maps were to use an already created census field and map said field, while the third map taught us how to combine two fields to create a new set of informative data.
+                        </p>
+                        <p>The first map depicts the population density for all census tracts within Buffalo and Erie County. The second map displays the median year of homes built in each census tract, with a noticeable relationship between older homes being in Buffalo city proper, and newer homes being in the surrounding suburbs and rural areas. The third and final map combines two census fields: the number of persons per tract, and the number of households. This results in us getting a new field that represents the average number of people to household in each census tract within Erie County. Note that one tract in the northwestern part of the county has an average household of nearly 79 people - this is because this tract is home to Erie County Correctional Facility, explaining the abnormal number of people per household.
+                        </p>
+                </div>
+                <div class="connect">
+                    <h5>Find me on these platforms.</h5>
+                        <ul>
+                            <li class="icon">
+                                <a href="https://www.linkedin.com/in/jake-w-289749185/" class="linked-in">LinkedIn</a>
+                                <a href="https://github.com/JakeWenger" class="github">GitHub</a>
+                                <a href="https://ind-18.maps.arcgis.com/home/index.html" class="arcgis">ArcGIS Online</a>
+                                <a href="https://www.instagram.com/jake_wenger/" class="instagram">Instagram</a>
+                                <a href="https://www.facebook.com/jake.wenger.9/" class="facebook">Facebook</a>
+                            </li>
+                        </ul>
+                </div>
+                <div class="footnote">
+                    <p>&copy; 2022 Jake Wenger</p>
+                </div>
+            </div>
+        </header>
+    </body>
+</html>
