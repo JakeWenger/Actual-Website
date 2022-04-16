@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8' />
+    <title>Presidents of the USA</title>
+    <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v2.2.0/mapbox-gl.js'></script>
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v2.2.0/mapbox-gl.css' rel='stylesheet' />
+    <style>
+        body { margin:0; padding:0; }
+        #map { position:absolute; top:0; bottom:0; width:100%; }
+        h2, h3 {
+            margin: 10px;
+            font-size: 1.2em;
+            text-align: center;
+        }
+        h3 {
+            font-size: 1em;
+        }
+        strong {
+            font-size: 1em;
+            text-align: center;
+        }
+        p {
+            font-size: 0.85em;
+            margin: 10px;
+            text-align: center;
+        }
+        .dot {
+            height: 10px;
+            width: 10px;
+            border-radius: 50%;
+            background-color: black;
+            display:block;
+        }
+        .map-overlay {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            background: rgba(255, 255, 255, 0.8);
+            margin-right: 20px;
+            font-family: Arial, sans-serif;
+            overflow: auto;
+            border-radius: 3px;
+        }
+        #features {
+            top: 0;
+            height: 100px;
+            margin-top: 20px;
+            width: 250px;
+         }
+         #legend {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            background: rgba(255, 255, 255, 0.8);
+            margin-left: 20px;
+            margin-bottom: 35px;
+            height: 175px;
+            width: 210px;
+            font-family: Arial, sans-serif;
+            overflow: auto;
+            border-radius: 3px;
+        }
+        #legend div span {
+            border-radius: 50%;
+            display: inline-block;
+            height: 10px;
+            width: 10px;
+            margin-right: 7.5px;
+            margin-left: 15px;
+        }
+      </style>
+</head>
+<body>
+    <div id="map"></div>
+    <div id='legend'>
+        <h2>Legend</h2>
+        <div><span style="background-color: #f42a2a;"></span>Republican</div>
+        <div><span style="background-color: #1577ef;"></span>Democrat</div>
+        <div><span style="background-color: #707070;"></span>Federalist</div>
+        <div><span style="background-color: #0e357b;"></span>Democratic-Republican</div>
+        <div><span style="background-color: #962af4;"></span>Whig</div>
+        <div><span style="background-color: #9195cf;"></span>National Union</div>
+        <div><span style="background-color: #f4bb2a;"></span>Independent/Other</div>
+    </div>
+    <div class='map-overlay' id='features'><h2>Birthplaces of American Presidents</h2><div id='pd'><p>Click any dot for further info.</p></div>
+    
+    <script>
+        mapboxgl.accessToken = 'pk.eyJ1IjoiamFrZXdlbmciLCJhIjoiY2swbXZ3Y2o0MWJiZDNrbzIzMDNuM3JrMyJ9.uKs8zY43KAGtZJUOjGS-gQ';
+        var map = new mapboxgl.Map({
+            container: 'map',
+            style: 'mapbox://styles/jakeweng/cl11cwpxd00bg14nxyidkxxgz',
+            center: [-95.549427, 39.033369],
+            zoom: 2.7,
+        });    
+        map.on('click', function (e) {
+            var features = map.queryRenderedFeatures(e.point, {
+                layers: ['presidents']
+            });
+            if (!features.length) {
+                return;
+            }
+            var feature = features[0];
+ 
+            var popup = new mapboxgl.Popup({ offset: [0, -15] })
+                .setLngLat(feature.geometry.coordinates)
+                .setHTML(
+                    '<h3>' + feature.properties.pres_name + '</h3>' + '<p>Born on ' + feature.properties.born  + '</p>' + '<p>Place of Birth: ' + feature.properties.POB + '</p>' + '<p>Home State: ' + feature.properties.home_state + '</p>' + '<p>Terms: ' + feature.properties.terms + '</p>' + '<p>Party: ' + feature.properties.party + '</p>' +
+                    '<p>Presidency: ' + feature.properties.term_years + '</p>'
+            )
+            .addTo(map);
+        });
+        map.getCanvas().style.cursor = 'default';
+    </script>
+</body>
+</html>
