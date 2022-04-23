@@ -32,7 +32,7 @@ h5 {
     font-size: 20px;
     color: #F8F0E3;
 }
-p {
+p, a {
     font-family: 'Red Hat Mono', monospace;
     font-size: 18px;
     color: #F8F0E3;
@@ -148,6 +148,10 @@ body {
     margin-bottom: 35px;
     margin-right: 100px;
     margin-left: 100px;
+}
+.content a {
+    margin-top: 35px;
+    margin-bottom: 35px;
 }
 .iframe {
     border: none;
