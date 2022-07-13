@@ -1,7 +1,6 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Red+Hat+Mono&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Anonymous+Pro&display=swap');
 /* <a href="https://www.freepik.com/vectors/background">Background vector created by freepik - www.freepik.com</a> */
 * {
     font-family: 'Courier New', Courier, monospace;
@@ -13,27 +12,27 @@ h1 {
     color: #F8F0E3;
 }
 h2 {
-    font-family: 'Anonymous Pro', monospace;
+    font: 'Ubuntu Mon', monospace;
     font-size: 56px;
     color: #F8F0E3;
 }
 h3 {
-    font-family: 'Ubuntu Mon', monospace;
+    font: 'Ubuntu Mon', monospace;
     font-size: 32px;
     color: #F8F0E3;
 }
 h4 {
-    font-family: 'Ubuntu Mon', monospace;
+    font: 'Ubuntu Mon', monospace;
     font-size: 24px;
     color: #F8F0E3;
 }
 h5 {
-    font-family: 'Red Hat Mono', monospace;
+    font: 'Red Hat Mono', monospace;
     font-size: 20px;
     color: #F8F0E3;
 }
-p, a {
-    font-family: 'Red Hat Mono', monospace;
+p {
+    font: 'Red Hat Mono', monospace;
     font-size: 18px;
     color: #F8F0E3;
 }
@@ -83,17 +82,20 @@ ul {
 	display: block;
 	position: absolute;
     visibility: hidden;
-    left: 1184px;
+    text-align: center;
 	top: 50px;
 	width: auto;
 }
+.drop div {
+    text-align: center;
+}
 #page .drop {
-    left: 1176px;
+    text-align: center;
 }
 .menu-drop:hover .drop {
-    left: 1184px;
     visibility: visible;
     opacity: 1.0;
+    text-align: center;
 }
 
 /* HEADER & BODY CSS */
@@ -101,7 +103,8 @@ ul {
 #home {
     background: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url("images/Test2.png");
     background-color: #85606e;
-    height: 100vh;
+    min-height: 100vh;
+    max-height: 9999px;
     background-size: 100%;
     background-position: center;
     background-repeat: no-repeat;
@@ -136,6 +139,7 @@ body {
     min-width: 750px;
     margin: auto;
     padding-bottom: 300px;
+    position: relative;
 }
 .content h1, h2, h3 {
     text-align: center;
@@ -148,10 +152,6 @@ body {
     margin-bottom: 35px;
     margin-right: 100px;
     margin-left: 100px;
-}
-.content a {
-    margin-top: 35px;
-    margin-bottom: 35px;
 }
 .iframe {
     border: none;
@@ -172,8 +172,9 @@ body {
     text-align: center;
 }
 
-/* ARCGIS STYLING */
 
+/* ARCGIS STYLING */
+/*
 .embed-container { 
     position: relative;
     left: -30px; 
@@ -190,7 +191,7 @@ body {
     width: 100%; 
     height: 100%;
 }
-
+*/
 /* BUTTON & HOVER EFFCTS */
 
 .interactive, .interactive ul li {
@@ -202,7 +203,7 @@ body {
     position: relative;
     align-items: center;
     display: inline-block;
-    font-family: 'Red Hat Mono', monospace;
+    font: monospace;
     font-size: 20px;
     background-color: #85606e;
     border:rgba(0, 0, 0, 0.25) 2px solid;
@@ -213,9 +214,6 @@ body {
 }
 #list {
     left: -20px;
-}
-#home-button {
-    left: -40px;
 }
 .button:hover {
     transition: ease-out 0.75s;
@@ -288,6 +286,9 @@ body {
 }
 .arcgis:hover {
     opacity: 0.7;
+}
+.static {
+    position: static;
 }
 
 /* FOOTNOTE */
